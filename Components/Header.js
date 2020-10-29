@@ -14,14 +14,14 @@ export default function Header(){
 
 const styles = StyleSheet.create({
     header: {
-        height: 80,
-        paddingTop: 30,
+        height: 100,
+        paddingTop: 50,
         backgroundColor: '#F5C2FF'
     },
     title: {
         textAlign: "center",
         color: 'white',
-        fontSize: 20,
+        fontSize: 40,
         fontWeight: "bold",
     }
 
