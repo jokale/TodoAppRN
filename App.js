@@ -18,7 +18,14 @@ export default function App() {
       <View style={styles.content}>
         {/* to do form */}
         <View style={styles.list}>
-          <FlatList/>
+          <FlatList 
+          data={todos}
+          renderItem={({item})=>(
+            <Text>{item.text}</Text>
+
+          )
+          }
+          />
         </View>
       </View>
     </View>
