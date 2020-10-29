@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import Header from './Components/Header';
+import Todo from './Components/Todo'
 
 export default function App() {
 
@@ -14,6 +15,12 @@ export default function App() {
 
   ]);
 
+  const pressHandler = (key) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter(todo => todo.key != key)
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Header/>
@@ -23,7 +30,7 @@ export default function App() {
           <FlatList 
           data={todos}
           renderItem={({item}) => (
-            <Todo items={}/>
+            <Todo item={item} pressHandler={pressHandler}/>
           )}
           />
         </View>
