@@ -23,7 +23,8 @@ export default function App() {
   }
 
   const submitHandler = (text) => {
-    setTodos((prevTodos) => {
+    if (text.length > 3){
+      setTodos((prevTodos) => {
       return[
         {text: text, key: Math.random().toString()},
         ...prevTodos
@@ -31,6 +32,8 @@ export default function App() {
     }
     )
   }
+    }
+    
 
   return (
     <View style={styles.container}>
