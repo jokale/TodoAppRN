@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { Alert, FlatList, StyleSheet, Text, View } from 'react-native';
 import Header from './Components/Header';
 import Todo from './Components/Todo'
 import Form from './Components/Form'
@@ -32,6 +32,11 @@ export default function App() {
     }
     )
   }
+  else {
+    Alert.alert('ERROR', 'You must add to do over 3 chars long', [{
+      text: 'Understood', onPress: () =>console.log('alert closed')}
+    ])
+      }
     }
     
 
