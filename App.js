@@ -25,8 +25,8 @@ export default function App() {
     <View style={styles.container}>
       <Header/>
       <View style={styles.content}>
-        {/* to do form */}
-        <View style={styles.list}>
+        <Form/>
+          <View style={styles.list}>
           <FlatList 
           data={todos}
           renderItem={({item}) => (
