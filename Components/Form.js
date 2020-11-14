@@ -16,7 +16,7 @@ export default function Form({submitHandler}){
             placeholder='What I need to do next'
             onChangeText={changeHandler}
             />
-            <Button onPress={()=> submitHandler(text)} title='Add' color='coral'></Button>
+            <Button onPress={()=> submitHandler(text)} title='Add' color='#1B76BE'></Button>
         </View>
     )
 }
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         paddingVertical:6,
         borderBottomWidth: 1,
-        borderBottomColor: 'purple',
+        borderBottomColor: '#1B76BE',
     }
   
   });
